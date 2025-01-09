@@ -131,12 +131,12 @@ const Property = () => {
                             />
                         </View>
                         <Text className='text-black-300 text-sm font-rubik-medium ml-2'>
-                            {property?.area} sqft
+                            {property?.area} m2
                         </Text>
                     </View>
 
                     <View className='w-full border-t border-primary-200 pt-7 mt-5'>
-                        <Text className='text-black-300 text-xl font-rubik-bold'>Agent</Text>
+                        <Text className='text-black-300 text-xl font-rubik-bold'>Quản Lý</Text>
 
                         <View className='flex flex-row items-center justify-between mt-4'>
                             <View className='flex flex-row items-center'>
@@ -169,14 +169,14 @@ const Property = () => {
                     </View>
 
                     <View className='mt-7'>
-                        <Text className='text-black-300 text-xl font-rubik-bold'>Overview</Text>
+                        <Text className='text-black-300 text-xl font-rubik-bold'>Tổng quan</Text>
                         <Text className='text-black-200 text-base font-rubik mt-2'>
                             {property?.description}
                         </Text>
                     </View>
 
                     <View className='mt-7'>
-                        <Text className='text-black-300 text-xl font-rubik-bold'>Facilities</Text>
+                        <Text className='text-black-300 text-xl font-rubik-bold'>Tiện ích</Text>
 
                         {property?.facilities.length > 0 && (
                             <View className='flex flex-row flex-wrap items-start justify-start mt-2 gap-5'>
@@ -232,7 +232,7 @@ const Property = () => {
                     )}
 
                     <View className='mt-7'>
-                        <Text className='text-black-300 text-xl font-rubik-bold'>Location</Text>
+                        <Text className='text-black-300 text-xl font-rubik-bold'>Vị trí</Text>
                         <View className='flex flex-row items-center justify-start mt-4 gap-2'>
                             <Image
                                 source={icons.location}
@@ -291,7 +291,7 @@ const Property = () => {
 
                     <TouchableOpacity className='flex-1 flex flex-row items-center justify-center bg-primary-300 py-3 rounded-full shadow-md shadow-zinc-400'>
                         <Text className='text-white text-lg text-center font-rubik-bold'>
-                            Book Now
+                            Đặt ngay
                         </Text>
                     </TouchableOpacity>
                 </View>

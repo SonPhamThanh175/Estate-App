@@ -6,6 +6,7 @@ import icons from '@/constants/icons';
 import images from '@/constants/images';
 import { getLatestProperties, getProperties } from '@/lib/appwrite';
 import { useGlobalContext } from '@/lib/global-provider';
+import seed from '@/lib/seed';
 import { useAppwrite } from '@/lib/useAppwrite';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect } from 'react';
@@ -50,6 +51,10 @@ export default function Index() {
         });
     }, [params.filter, params.query]);
 
+    const handleSeed = async () => {
+        seed()
+    }
+
     return (
         <SafeAreaView className='w-full bg-white'>
             <FlatList
@@ -79,7 +84,6 @@ export default function Index() {
                     <View className='px-5 '>
                         <View className='flex flex-row items-center justify-between mt-5'>
                             <View className='flex flex-row items-center'>
-                                \
                                 <Image
                                     source={{ uri: user.avatar }}
                                     className='size-12 rounded-full'
@@ -102,11 +106,11 @@ export default function Index() {
                         <View className='my-5'>
                             <View className='flex flex-row items-center justify-between'>
                                 <Text className='text-xl font-rubik-bold text-black-300'>
-                                    Featured
+                                    Nổi bật
                                 </Text>
                                 <TouchableOpacity>
                                     <Text className='text-base font-rubik-bold text-primary-300'>
-                                        See All
+                                        Xem tất cả
                                     </Text>
                                 </TouchableOpacity>
                             </View>
@@ -136,15 +140,15 @@ export default function Index() {
                         </View>
                         <View className='flex flex-row items-center justify-between'>
                             <Text className='text-xl font-rubik-bold text-black-300'>
-                                Our Recommendation
+                                Có thể bạn quan tâm
                             </Text>
                             <TouchableOpacity>
                                 <Text className='text-base font-rubik-bold text-primary-300'>
-                                    See All
+                                    Xem tất cả
                                 </Text>
                             </TouchableOpacity>
                         </View>
-                        <Filters />
+                        <Filters/>
                     </View>
                 }
             />
