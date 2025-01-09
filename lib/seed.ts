@@ -98,8 +98,8 @@ async function seed() {
         COLLECTIONS.AGENT!,
         ID.unique(),
         {
-          name: `Agent ${i}`,
-          email: `agent${i}@example.com`,
+          name: `Quản lý ${i}`,
+          email: `admin${i}@huce.edu.com`,
           avatar: agentImages[Math.floor(Math.random() * agentImages.length)],
         }
       );
@@ -115,9 +115,9 @@ async function seed() {
         COLLECTIONS.REVIEWS!,
         ID.unique(),
         {
-          name: `Reviewer ${i}`,
+          name: `Nguyễn Thị A ${i}`,
           avatar: reviewImages[Math.floor(Math.random() * reviewImages.length)],
-          review: `This is a review by Reviewer ${i}.`,
+          review: `Sản phẩm ${i} mang lại trải nghiệm đáng nhớ trong đời tôi .`,
           rating: Math.floor(Math.random() * 5) + 1, // Rating between 1 and 5
         }
       );
@@ -162,10 +162,10 @@ async function seed() {
         COLLECTIONS.PROPERTY!,
         ID.unique(),
         {
-          name: `Property ${i}`,
+          name: `Sản phẩm thứ ${i}`,
           type: propertyTypes[Math.floor(Math.random() * propertyTypes.length)],
-          description: `This is the description for Property ${i}.`,
-          address: `123 Property Street, City ${i}`,
+          description: `Thông tin về bất động sản số ${i}.`,
+          address: `${i} Bạch Mai - Hai Bà Trưng, Hà Nội `,
           geolocation: `192.168.1.${i}, 192.168.1.${i}`,
           price: Math.floor(Math.random() * 9000) + 1000,
           area: Math.floor(Math.random() * 3000) + 500,

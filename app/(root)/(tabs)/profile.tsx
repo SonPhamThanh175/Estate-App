@@ -64,7 +64,7 @@ const Profile = () => {
                 contentContainerClassName='pb-32 px-7'
             >
                 <View className='flex flex-row items-center justify-between mt-5'>
-                    <Text className='text-xl font-rubik-bold'>Profile</Text>
+                    <Text className='text-xl font-rubik-bold'>Thông tin cá nhân</Text>
                     <Image
                         source={icons.bell}
                         className='size-5'
@@ -88,11 +88,11 @@ const Profile = () => {
                 <View className='flex flex-col mt-10'>
                     <SettingsItem
                         icon={icons.calendar}
-                        title='MyBooking'
+                        title='Phòng đã đặt'
                     />
                     <SettingsItem
                         icon={icons.wallet}
-                        title='Payments'
+                        title='Thanh toán'
                     />
                 </View>
                 <View className='flex flex-col mt-5 border-t pt-5 border-primary-200'>
@@ -108,7 +108,7 @@ const Profile = () => {
                     <SettingsItem
                         icon={icons.logout}
                         showArrow={false}
-                        title='Logout'
+                        title='Đăng xuất'
                         textStyle='text-danger'
                         onPress={handleLogout}
                     />
